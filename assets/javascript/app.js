@@ -1,21 +1,40 @@
-var quizQuestions = $(".quiz");
-
-function beginQuiz(){
-    for (var i = 0; i < myQuotes.length; i++) {
-        var newQuestionDiv = $("<div>" + myQuotes[i].quote + "</div>");
-        quizQuestions.append(newQuestionDiv);
-        
-    }
-};
 function start_timer(){};
 
 $(".start_quiz").click(function(){
     $(".opening_page").hide();
-    beginQuiz();
     $("<div id 'timer'>00:00</div>").appendTo("body");
-
 });
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* variables for later use when I figure this out
+var quizQuestions = $(".quiz");
+var quizAnswers = $(".quiz_answers");
+*/
+/* will have to figure this out later 
+function beginQuiz(){
+    for (var i = 0; i < myQuotes.length; i++) {
+        var newQuestionDiv = $("<div class = question>" + myQuotes[i].quote + "</div>");
+        quizQuestions.append(newQuestionDiv);
+            for (var j = 0; j < myQuotes[i].answers.length; j++) {
+                var newAnswersDiv = $("<div class = answers>" + myQuotes[i].answers[j] + "</div>");
+                quizQuestions.append(newAnswersDiv);
+            }
+    }
+};
+*/
+/* May have to wait til later to figure out how to use this.
 var myQuotes = [
     {
         quote: '"I wondered why the frisbee was getting bigger, and then it hit me."',
@@ -126,3 +145,4 @@ var myQuotes = [
         correctAnswer: "c",
     }
 ];
+*/
