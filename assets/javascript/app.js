@@ -2,7 +2,8 @@ function start_timer(){};
 
 $(".start_quiz").click(function(){
     $(".opening_page").hide();
-    $("<div id 'timer'>00:00</div>").appendTo("body");
+    $("<div id 'timer'>00:00</div>").prependTo(".container");
+    $(".quiz").toggle();
 });
 
 
