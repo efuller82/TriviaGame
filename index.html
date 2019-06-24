@@ -25,7 +25,7 @@
         </div>
 
         <div class="quiz" style="display: none">
-            
+            <div id="timer"></div>
             <div id="question_1" class="question">"I wondered why the frisbee was getting bigger, and then it hit me."        
                 <div class="custom-control custom-radio">
                 <input type="radio" id="customRadio1" name="question1" class="custom-control-input">
@@ -215,8 +215,21 @@
                 <label class="custom-control-label" for="customRadio40">Bill Cosby</label>
                 </div>
             </div>
+            <button type="button" class="btn btn-primary btn-lg submit_answers">Submit Answers</button>
         </div>
-      
+        <div id="results_page" style="display: none">
+            <div>
+                <h1>Results</h1>
+            </div>
+            <div>
+                <h2>Correct answers:</h2>
+                <h2>Incorrect answers:</h2>
+                <h2>Unanswered questions:</h2>
+            </div>
+            
+
+        </div>
+        
     </div>
     
    

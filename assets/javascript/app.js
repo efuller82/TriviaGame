@@ -1,9 +1,46 @@
 function start_timer(){};
 
+//setting up timer
+var number = 120;
+var intervalID;
+
+//sets an interval that runs the decrement function once a second
+function run() {
+    clearInterval(intervalID);
+    intervalID = setInterval(decrement, 1000);
+}
+
+//stop function
+function stop() {
+    clearInterval(intervalID);
+    $(".quiz").toggle();
+    $("#results_page").toggle();
+
+}
+
+//decrement function
+function decrement() {
+    number--;
+    $("#timer").html("<h2>" + number + "</h2>");
+    //once number hits zero
+    if (number === 0) {
+        stop();
+        //do other stuff here
+    }
+}
+
+//starts quiz 
 $(".start_quiz").click(function(){
     $(".opening_page").hide();
-    $("<div id 'timer'>00:00</div>").prependTo(".container");
     $(".quiz").toggle();
+    run();
+});
+
+
+//goes to results page when quiz is finished
+$(".submit_answers").click(function() {
+    $(".quiz").toggle();
+    $("#results_page").toggle();
 });
 
 
