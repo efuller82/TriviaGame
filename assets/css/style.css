@@ -41,6 +41,9 @@ h1 {
    margin-left: auto;
    margin-right: auto;
    font-weight: bold;
+   background-color: black;
+   opacity: .8;
+   
 }
 
 #results_page {
