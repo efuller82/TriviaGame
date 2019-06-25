@@ -1,5 +1,3 @@
-function start_timer(){};
-
 //setting up timer
 var number = 120;
 var intervalID;
@@ -26,6 +24,7 @@ function decrement() {
     if (number === 0) {
         stop();
         //do other stuff here
+        getCorrectAnswers();
     }
 }
 
@@ -39,6 +38,7 @@ $(".start_quiz").click(function(){
 //attempt to calculate results
 var correctAnswersArray = [];
 var incorrectAnswersArray = [];
+var unansweredQuestions;
 function getCorrectAnswers() {
         $("form input[type='radio']:checked").each(function(){
             var questionAnswer = $(this).val();
@@ -47,9 +47,21 @@ function getCorrectAnswers() {
             } else if (questionAnswer !== "correct") {
                 incorrectAnswersArray.push(questionAnswer);
             }
+            unansweredQuestions = 10 - (correctAnswersArray.length + incorrectAnswersArray.length);
         })    
         console.log(correctAnswersArray);
+        console.log(incorrectAnswersArray);
     }
+
+ 
+
+
+//function to publish results
+function postResults() {
+    $("#correct_answers").text("Correct answers: " + correctAnswersArray.length);
+    $("#incorrect_answers").text("Incorrect answers: " + incorrectAnswersArray.length);
+    $("#unanswered_questions").text("Unanswered questions: " + unansweredQuestions);
+}
 
 
 
@@ -57,6 +69,7 @@ function getCorrectAnswers() {
 $(".submit_answers").click(function() {
     $(".quiz").toggle();
     getCorrectAnswers();
+    postResults();
     $("#results_page").toggle();
 });
 
