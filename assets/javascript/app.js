@@ -11,8 +11,8 @@ function run() {
 //stop function
 function stop() {
     clearInterval(intervalID);
-    $(".quiz").toggle();
-    $("#results_page").toggle();
+    $(".quiz").hide();
+    $("#results_page").show();
 
 }
 
@@ -26,6 +26,9 @@ function decrement() {
         //do other stuff here
         getCorrectAnswers();
         postResults();
+        if (correctAnswersArray.length < 7) {
+            $("audio#laughter")[0].play();
+        }
     }
 }
 
@@ -72,6 +75,9 @@ $(".submit_answers").click(function() {
     getCorrectAnswers();
     postResults();
     $("#results_page").toggle();
+    if (correctAnswersArray.length < 7) {
+        $("audio#laughter")[0].play();
+    }
 });
 
 

@@ -23,6 +23,8 @@ body {
    /*background-image: url("../images/red-curtain-backdrop.jpg");*/
    background-image: url("../images/brick-background.jpg");
    background-size: 100%;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
 }
  
 .jumbotron {
@@ -34,10 +36,11 @@ h1 {
 }
 
 .quiz {
-   color: white;
+   color: #fff94c;
    width: 70%;
    margin-left: auto;
    margin-right: auto;
+   font-weight: bold;
 }
 
 #results_page {
@@ -57,3 +60,4 @@ h1 {
 .opening_page {
    margin-left: 20%
 }
+
