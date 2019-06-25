@@ -1,5 +1,5 @@
 //setting up timer
-var number = 120;
+var number = 90;
 var intervalID;
 
 //sets an interval that runs the decrement function once a second
@@ -25,6 +25,7 @@ function decrement() {
         stop();
         //do other stuff here
         getCorrectAnswers();
+        postResults();
     }
 }
 

@@ -6,4 +6,21 @@
    margin-top: 4vh;
 }
 
+#timer {
+   font-family: 'Orbitron', sans-serif;
+   font-weight: bold;
+   size: 40px;
+   background-color: lightslategray;
+   width: max-content;
+   padding: 0px 5px;
+   position: -webkit-sticky;
+   position: sticky;
+   top: 0;
+   float: right;
+}
+
+body {
+   background-image: url("../images/red-curtain-backdrop.jpg");
+   background-size: 100%;
+}
 
