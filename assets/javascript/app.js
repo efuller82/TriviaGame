@@ -36,12 +36,30 @@ $(".start_quiz").click(function(){
     run();
 });
 
+//attempt to calculate results
+var correctAnswersArray = [];
+var incorrectAnswersArray = [];
+function getCorrectAnswers() {
+        $("form input[type='radio']:checked").each(function(){
+            var questionAnswer = $(this).val();
+            if (questionAnswer === "correct") {
+            correctAnswersArray.push(questionAnswer);
+            } else if (questionAnswer !== "correct") {
+                incorrectAnswersArray.push(questionAnswer);
+            }
+        })    
+        console.log(correctAnswersArray);
+    }
+
+
 
 //goes to results page when quiz is finished
 $(".submit_answers").click(function() {
     $(".quiz").toggle();
+    getCorrectAnswers();
     $("#results_page").toggle();
 });
+
 
 
 
