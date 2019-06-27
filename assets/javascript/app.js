@@ -1,5 +1,5 @@
 //setting up timer
-var number = 90;
+var number = 120;
 var intervalID;
 
 //sets an interval that runs the decrement function once a second
@@ -78,6 +78,7 @@ $(".submit_answers").click(function() {
     if (correctAnswersArray.length < 7) {
         $("audio#laughter")[0].play();
     }
+    clearInterval(intervalID);
 });
 
 
